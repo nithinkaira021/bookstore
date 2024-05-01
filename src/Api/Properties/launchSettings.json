@@ -1,0 +1,69 @@
+{
+  "profiles": {
+    "BookstoreApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "httpPort": 40080,
+      "sslPort": 40443,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BookstoreMongoDBConnection": "mongodb://localhost:27017",
+        "UserMySQLConnection": "server=localhost;database=bookstore_users;uid=root;pwd=123456;",
+        "JwtIssuer": "localhost",
+        "JwtAudience": "BookstoreApi",
+        "JwtSecret": "secretTokenValue",
+        "JwtTokenLifetime": "60",
+        "OwnerDefaultUser": "owner",
+        "OwnerDefaultPassword": "123456"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7126;http://localhost:5126"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BookstoreMongoDBConnection": "mongodb://localhost:27017",
+        "UserMySQLConnection": "server=localhost;database=bookstore_users;uid=root;pwd=123456;",
+        "JwtIssuer": "localhost",
+        "JwtAudience": "BookstoreApi",
+        "JwtSecret": "secretTokenValue",
+        "JwtTokenLifetime": "60",
+        "OwnerDefaultUser": "owner",
+        "OwnerDefaultPassword": "123456"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "useSSL": true,
+      "httpPort": 40080,
+      "sslPort": 40443,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BookstoreMongoDBConnection": "mongodb://localhost:27017",
+        "UserMySQLConnection": "server=localhost;database=bookstore_users;uid=root;pwd=123456;",
+        "JwtIssuer": "localhost",
+        "JwtAudience": "BookstoreApi",
+        "JwtSecret": "secretTokenValue",
+        "JwtTokenLifetime": "60",
+        "OwnerDefaultUser": "owner",
+        "OwnerDefaultPassword": "123456"
+      }
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:28306",
+      "sslPort": 44341
+    }
+  }
+}
